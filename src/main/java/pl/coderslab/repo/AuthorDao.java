@@ -1,12 +1,13 @@
 package pl.coderslab.repo;
 
 import org.springframework.stereotype.Repository;
-import pl.coderslab.model.Author;
-import pl.coderslab.model.Book;
+import pl.coderslab.app.model.Author;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Repository
 @Transactional
@@ -14,8 +15,17 @@ public class AuthorDao {
     @PersistenceContext
     EntityManager entityManager;
 
+    public List<Author> getAllAuthors(){
+        Query query = entityManager.createQuery("Select k From Author k");
+        return query.getResultList();
+    }
+
     public void addAuthor(Author author) {
-        entityManager.persist(author);
+        if(Long.valueOf(author.getId())==null){
+            entityManager.persist(author);
+        }else {
+            entityManager.merge(author);
+        }
     }
 
     public void updateAuthor (Author author){

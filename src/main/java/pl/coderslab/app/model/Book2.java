@@ -1,10 +1,10 @@
-//package pl.coderslab.model;
+//package pl.coderslab.app.model;
 //
 //import javax.persistence.*;
 //
 //@Entity
-//@Table(name = "books")
-//public class Book {
+//@Table(name = "books2")
+//public class Book2 {
 //
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,14 +13,14 @@
 //    private int rating;
 //    private String title;
 //
-//    public Book(Long id, String description, int rating, String title) {
+//    public Book2(Long id, String description, int rating, String title) {
 //        this.id = id;
 //        this.description = description;
 //        this.rating = rating;
 //        this.title = title;
 //    }
 //
-//    public Book() {
+//    public Book2() {
 //    }
 //
 //    public Long getId() {

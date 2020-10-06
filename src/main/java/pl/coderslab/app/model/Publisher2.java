@@ -1,9 +1,9 @@
-//package pl.coderslab.model;
+//package pl.coderslab.app.model;
 //
 //import javax.persistence.*;
 //
 //@Entity
-//@Table(name="publishers")
+//@Table(name="publishers2")
 //public class Publisher2 {
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,7 +15,6 @@
 ////        this.name = name;
 ////    }
 //
-//    @OneToMany(mappedBy = "publisher")
 //
 //    public Publisher2() {
 //    }
